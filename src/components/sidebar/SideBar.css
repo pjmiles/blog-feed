@@ -27,9 +27,11 @@ main{
     font-size: 25px;
     display: flex;
     margin-left: 50px;
+    cursor: pointer;
 }
 .sidebar-link{
     display: flex;
+    font-size: 20px;
     padding: 10px 15px;
     gap: 15px;
     color: var(--alt-light);
@@ -39,4 +41,11 @@ main{
     background: var(--secondary);
     color: var(--blue-light);
     transition: all 0.5s;
+}
+.side-icon, .link-text {
+    font-size: 20px;
+}
+.active{
+    background-color: var(--blue-light);
+    color: var(--primary);
 }
