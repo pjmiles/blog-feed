@@ -1,0 +1,42 @@
+.sidebar-container {
+    display: flex;
+} 
+
+main{
+    width: 100%;
+    background-color: var(--secondary);
+    padding: 20px; 
+}
+
+.sidebar {
+    background: var(--primary);
+    color: var(--light);
+    height: 100vh;
+    width: 300px;
+}
+.sidebar-top {
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.logo {
+    font-size: 30px;
+}
+.bars{
+    font-size: 25px;
+    display: flex;
+    margin-left: 50px;
+}
+.sidebar-link{
+    display: flex;
+    padding: 10px 15px;
+    gap: 15px;
+    color: var(--alt-light);
+    transition: all 0.5s;
+}
+.sidebar-link:hover {
+    background: var(--secondary);
+    color: var(--blue-light);
+    transition: all 0.5s;
+}

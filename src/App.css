@@ -1,0 +1,15 @@
+:root {
+    --primary:  #1d1515;
+    --alt-primary: #425052;
+    --secondary: #2d2d68;
+    --blue-light: #9494fd;
+    --light: #FDFBFA;
+    --alt-light: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
