@@ -1,7 +1,8 @@
 :root {
     --primary:  #1d1515;
     --alt-primary: #425052;
-    --secondary: #2d2d68;
+    --secondary: white;
+    --secondary2: #2d2d68;
     --blue-light: #9494fd;
     --light: #FDFBFA;
     --alt-light: #FFFFFF;
