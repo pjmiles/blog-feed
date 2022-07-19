@@ -1,0 +1,23 @@
+.blog {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.blog-header-text {
+    height: 50px;
+    background: var(--blue-light);
+    color: var(--secondary2);
+    text-align: center;
+}
+
+.blog-header-text p {
+    font-size: 35px;
+    margin-top: 5px;
+}
+
+.blog-container {
+    padding: 2px 16px;
+}

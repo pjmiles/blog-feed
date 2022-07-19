@@ -1,6 +1,7 @@
 import "./pageStyle/CreateBlog.css";
 
 const CreateBlog = () => {
+  
   return (
     <div className="create-section">
         <div className="header-text">

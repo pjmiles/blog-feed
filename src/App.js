@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import SideBar from "./components/sidebar/SideBar";
-import Blog from "./pages/Blog";
+import Blog from "./pages/BlogPage";
 import CreateBlog from "./pages/CreateBlog";
 
 function App() {
