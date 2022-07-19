@@ -18,22 +18,27 @@ const BlogPage = () => {
     getBlog()
   }, [])
 
-
-
   return (
+    
     <div className="blog">
       <div className="blog-header-text">
         <p>Blogs...</p>
       </div>
-      <div className="blog-container">
-        <p className="blog-title">Title</p>
-        <p className="blog-content">Content</p>
-        <p className="blog-author">Author</p>
-      </div>
+      {displayBlogs.map((blogPost) => {
+        return (
+          <>
+          <div className="blog-container">
+            <p className="blog-title">{blogPost?.title}</p>
+            <p className="blog-content">{blogPost?.content}</p>
+            <p className="blog-author">{blogPost?.author}</p>
+          </div>
 
-      <div className="delete-btn-container">
-        <button className="delete-btn">delete</button>
-      </div>
+          <div className="delete-btn-container">
+            <button className="delete-btn">delete</button>
+          </div>        
+        </>
+        );
+      })}
     </div>
   );
 };
