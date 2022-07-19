@@ -18,6 +18,14 @@ const BlogPage = () => {
     getBlog()
   }, [])
 
+  const handleDelete = async (id) => {
+    try {
+      await axiosInstance.delete("/" + id)
+    } catch {
+      console.log("Error for delete")
+    }
+  }
+
   return (
     
     <div className="blog">
@@ -34,7 +42,7 @@ const BlogPage = () => {
           </div>
 
           <div className="delete-btn-container">
-            <button className="delete-btn">delete</button>
+            <button className="delete-btn" onClick={()=> handleDelete(blogPost._id)}>delete</button>
           </div>        
         </>
         );
