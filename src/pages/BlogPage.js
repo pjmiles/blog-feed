@@ -1,29 +1,46 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axiosInstance from "../api/axios";
 import "./pageStyle/BlogPage.css";
 
 const BlogPage = () => {
   const [displayBlogs, setDisplayBlogs] = useState([]);
+  const [page, setPage] = useState(1);
+  let navigate = useNavigate()
+  const getBlog = async () => {
+    try {
+      const { data } = await axiosInstance.get();
+      const allPost = data.getBlogPost.docs
+      setDisplayBlogs((prevPost) => [...prevPost, ...allPost]);
+      loadMore()
+    } catch {
+      console.log("Error occured");
+    }
+  };
+
+  const loadMore = () => {
+    setPage(page + 1);
+  };
+
+  const handleScroll = (e) => {
+    if(window.innerHeight + e.target.documentElement.scrollTop + 1 >=
+      e.target.documentElement.scrollHeight) {
+        getBlog()
+      }
+  }
 
   useEffect(() => {
-    const getBlog = async () => {
-      try {
-        const { data } = await axiosInstance.get();
-        setDisplayBlogs(data.getBlogPost.docs);
-        console.log(data);
-      } catch {
-        console.log("Error occured");
-      }
-    };
     getBlog();
-  }, []);
+    window.addEventListener('scroll', handleScroll)
+  },[]);
 
   const handleDelete = async (id) => {
     try {
-      await axiosInstance.delete("/" + id);
+      await axiosInstance.delete("/" + id); 
     } catch {
       console.log("Error for delete");
     }
+    navigate("/")
   };
 
   return (
