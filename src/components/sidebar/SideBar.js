@@ -1,24 +1,13 @@
 import { useState } from "react";
-import { FaHome, FaBars } from "react-icons/fa";
-import { ImBlogger2 } from "react-icons/im";
+import { FaBars } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { menuItems } from "./MenuItems";
 import './SideBar.css'
 
 const SideBar = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false)
     const toggle = () => setIsOpen(!isOpen)
-  const menuItems = [
-    {
-      path: "/",
-      name: "Blogs",
-      icon: <FaHome />,
-    },
-    {
-      path: "/create",
-      name: "CreateBlog",
-      icon: <ImBlogger2 />,
-    },
-  ];
+    
   return (
     <div className="sidebar-container">
       <div className="sidebar" style={{width: isOpen ? "300px" : "50px"}}>

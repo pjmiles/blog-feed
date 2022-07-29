@@ -5,11 +5,11 @@
 main{
     width: 100%;
     background-color: var(--secondary);
-    padding: 20px; 
+    padding: 20px;
 }
 
 .sidebar {
-    background: var(--primary);
+    background-color: var(--primary);
     color: var(--light);
     height: 100vh;
     width: 300px;

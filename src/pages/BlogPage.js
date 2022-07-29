@@ -7,6 +7,7 @@ const BlogPage = () => {
   const [displayBlogs, setDisplayBlogs] = useState([]);
   const [page, setPage] = useState(1);
   let navigate = useNavigate()
+
   const getBlog = async () => {
     try {
       const { data } = await axiosInstance.get();
@@ -32,7 +33,7 @@ const BlogPage = () => {
   useEffect(() => {
     getBlog();
     window.addEventListener('scroll', handleScroll)
-  },[]);
+  }, []);
 
   const handleDelete = async (id) => {
     try {
