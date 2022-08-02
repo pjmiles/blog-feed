@@ -8,18 +8,19 @@ const BlogPage = () => {
   const [page, setPage] = useState(1);
   let navigate = useNavigate();
 
-  const getBlog = async () => {
-    try {
-      const { data } = await axiosInstance.get();
-      const allPost = data.getBlogPost.docs;
-      setDisplayBlogs((prevPost) => [...prevPost, ...allPost]);
-      setPage(page + 1);
-    } catch {
-      console.log("Error occured");
-    }
-  };
-
+ 
   useEffect(() => {
+    const getBlog = async () => {
+      try {
+        const { data } = await axiosInstance.get();
+        const allPost = data.getBlogPost.docs;
+        setDisplayBlogs((prevPost) => [...prevPost, ...allPost]);
+        setPage();
+      } catch {
+        console.log("Error occured");
+      }
+    };
+  
     const handleScroll = (e) => {
       if (
         window.innerHeight + e.target.documentElement.scrollTop + 1 >=
@@ -29,8 +30,13 @@ const BlogPage = () => {
       }
     };
     getBlog();
+
     window.addEventListener("scroll", handleScroll);
-  }, []);
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll)    //clean up function 
+    }
+  }, [page]);
 
   const handleDelete = async (id) => {
     try {
