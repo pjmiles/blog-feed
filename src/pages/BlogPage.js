@@ -5,17 +5,14 @@ import "./pageStyle/BlogPage.css";
 
 const BlogPage = () => {
   const [displayBlogs, setDisplayBlogs] = useState([]);
-  const [page, setPage] = useState(1);
   let navigate = useNavigate();
-
  
   useEffect(() => {
     const getBlog = async () => {
       try {
         const { data } = await axiosInstance.get();
-        const allPost = data.getBlogPost.docs;
-        setDisplayBlogs((prevPost) => [...prevPost, ...allPost]);
-        setPage();
+        const Post = data.getBlogPost.docs;
+        setDisplayBlogs((prevPost) => [...prevPost, ...Post]);
       } catch {
         console.log("Error occured");
       }
@@ -36,7 +33,7 @@ const BlogPage = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll)    //clean up function 
     }
-  }, [page]);
+  }, []);
 
   const handleDelete = async (id) => {
     try {
