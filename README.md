@@ -22,7 +22,7 @@ In the project directory, you can run:
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-## Project Link
+## API Link
 API URL: [https://blog-api344.herokuapp.com/blogposts]
 
 
@@ -31,5 +31,5 @@ Live Solution URL:
 
 
 ## Contributors/Reviewers
- * Boro 0mokugbo Joseph - Asylcreek
- * Ponmile Adebisi - pjmiles
+ * <a href = "https://github.com/Asylcreek">Boro 0mokugbo Joseph - Asylcreek</a>
+* <a href = "https://github.com/pjmiles">Ponmile Adebisi - pjmiles</a> 
