@@ -27,7 +27,7 @@ API URL: [https://blog-api344.herokuapp.com/blogposts]
 
 
 ## Project Link
-Live Solution URL: 
+Live Solution URL: [https://blog-feed-rho.vercel.app/]
 
 
 ## Contributors/Reviewers
