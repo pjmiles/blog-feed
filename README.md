@@ -31,5 +31,6 @@ Live Solution URL: [https://blog-feed-rho.vercel.app/]
 
 
 ## Contributors/Reviewers
- * <a href = "https://github.com/Asylcreek">Boro 0mokugbo Joseph - Asylcreek</a>
-* <a href = "https://github.com/pjmiles">Ponmile Adebisi - pjmiles</a> 
+* Frontend by [Ponmile](https://github.com/pjmiles)
+* Backend by [Michael](https://github.com/Michaeljogoh)
+* Reviewer [Asylcreek](https://github.com/Asylcreek)
