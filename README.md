@@ -1,8 +1,8 @@
-# Infinite Scroll Blog
-A Blog Site
+# Blog Site
+A simple Blog Site built with React 
 
 ## Project Description
-This project is to help showcase understanding of API design and Database Design. The major goal is to learn how to consume API at the backend and rendering the call on the frontend, including helping to understand how to build a scalable software for future purpose.
+This project is to help showcase understanding of API design and Database Design. The major goal is to learn how to consume API at the backend and rendering the call on the frontend, including helping developers to understand how to build a scalable software for future purpose.
 
 ### This project was built with the following technology;
 
